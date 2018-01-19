@@ -1,0 +1,10 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: conda-svc
+spec:
+  type: NodePort
+  ports:
+    - port: 8888
+  selector:
+    app: conda

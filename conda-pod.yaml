@@ -1,0 +1,26 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  generateName: conda-
+  labels:
+    app: conda
+spec:
+  volumes:
+    - name: conda-volume
+      persistentVolumeClaim:
+       claimName: conda-claim
+  containers:
+    - name: conda
+      image: continuumio/anaconda3
+      env:
+      - name: JUPYTERCMD
+        value: "/opt/conda/bin/conda install jupyter nb_conda -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
+      command: ["bash"]
+      args: ["-c","$(JUPYTERCMD)"]
+      ports:
+        - containerPort: 8888
+          name: "http-server"
+      volumeMounts:
+        - mountPath: "/opt/notebooks"
+          name: conda-volume
+
