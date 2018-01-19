@@ -1,4 +1,4 @@
-** Help getting Conda and Jupyter Notebook running on Kubernetes
+** Help getting Conda and Jupyter Notebook running on Kubernetes **
 
 Jupyterhub is overkill for my use, but you may be interested in running it.
 
