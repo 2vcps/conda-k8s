@@ -1,6 +1,6 @@
-** Help getting Conda and Jupyter Notebook running on Kubernetes **
+# Help getting Conda and Jupyter Notebook running on Kubernetes
 
-Jupyterhub is overkill for my use, but you may be interested in running it.
+**Jupyterhub** is overkill for my use, but you may be interested in running it.
 
 files included with this repo will help you use the base conda docker image with K8s.
 In order of running:
