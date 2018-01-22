@@ -9,5 +9,5 @@ spec:
     - ReadWriteMany
   nfs:
     # FIXME: use the right IP and the right path
-    server: 192.168.1.50
-    path: "/nfs/repos/tensorflow"
+    server: 192.168.x.x
+    path: "/nfs/repos/yourpath
